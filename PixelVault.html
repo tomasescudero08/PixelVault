@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelVault | Tu tienda online de Videojuegos</title>
+    <link rel="stylesheet" href="css/PixelVault.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<header>
+    <nav class="navbar"> 
+  <ul>
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#catalogo">Catalogo</a></li>
+    <li><a href="#nuevo">Nuevo</a></li>
+    <li><a href="#descuentos">Descuentos</a></li>
+    <li><a href="#nosotros">Nosotros</a></li>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" width="15%" height="auto" aria-label="PixelVault Logo">
+  <defs>
+    <!-- Gradiente Rojo Neón -->
+    <linearGradient id="redGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF1E27" />
+      <stop offset="100%" stop-color="#990000" />
+    </linearGradient>
+    
+    <!-- Filtro para resplandor neón -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ISOTIPO: Vault Cube + Pixels -->
+  <g transform="translate(10, 10)">
+    <!-- Cara Superior -->
+    <polygon points="40,5 75,25 40,45 5,25" fill="#1A1A22" stroke="#FF0000" stroke-width="2" />
+    <!-- Cara Izquierda -->
+    <polygon points="5,25 40,45 40,75 5,55" fill="#0D0D11" stroke="#FF0000" stroke-width="2" />
+    <!-- Cara Derecha -->
+    <polygon points="40,45 75,25 75,55 40,75" fill="#14141A" stroke="#FF0000" stroke-width="2" />
+    
+    <!-- Núcleo brillante / Píxel central -->
+    <rect x="34" y="34" width="12" height="12" fill="url(#redGlow)" filter="url(#neonGlow)" transform="rotate(45 40 40)" />
+    
+    <!-- Píxeles flotantes (Detalles gaming) -->
+    <rect x="15" y="10" width="6" height="6" fill="#FF0000" opacity="0.8" />
+    <rect x="62" y="60" width="5" height="5" fill="#FF0000" opacity="0.9" />
+    <rect x="68" y="18" width="4" height="4" fill="#FF4D4D" opacity="0.7" />
+  </g>
+
+  <!-- LOGOTIPO: Texto Tipográfico -->
+  <g transform="translate(95, 55)">
+    <!-- Texto "PIXEL" -->
+    <text x="0" y="0" font-family="'Segoe UI', Roboto, 'Arial Black', sans-serif" font-size="36" font-weight="900" fill="#FFFFFF" letter-spacing="2">
+      PIXEL
+    </text>
+    
+    <!-- Texto "VAULT" -->
+    <text x="112" y="0" font-family="'Segoe UI', Roboto, 'Arial Black', sans-serif" font-size="36" font-weight="900" fill="url(#redGlow)" filter="url(#neonGlow)" letter-spacing="2">
+      VAULT
+    </text>
+
+    <!-- Subtítulo o detalle estilizado -->
+    <rect x="0" y="10" width="230" height="3" fill="#FF0000" opacity="0.8" />
+    <rect x="180" y="10" width="50" height="3" fill="#FFFFFF" />
+  </g>
+</svg>
+    <div class="search-box">
+        <input type="text" placeholder="Buscar juegos...">
+        <button type="submit" aria-label="Buscar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </div>
+  </ul>
+
+</nav>
+
+
+</header>
+<body>
+  <br><br><br><br><br><br>
+<section id="inicio" class="hero-container">
+  
+  <!-- CONTENIDO PRINCIPAL (IZQUIERDA) -->
+  <div class="hero-content">
+    <span class="hero-badge"><i class="fa-solid fa-fire"></i> Nuevo Lanzamiento</span>
+    <h1 class="hero-title">DOMINA EL <span class="text-neon">FUTURO</span> DIGITAL</h1>
+    <p class="hero-description">
+      Únete a la nueva era de videojuegos. Explora títulos exclusivos, ventajas competitivas y la mejor comunidad de jugadores en PixelVault.
+    </p>
+    
+    <div class="hero-buttons">
+      <a href="#catalogo" class="btn-primary">Explorar Catálogo</a>
+      <a href="#" class="btn-secondary">Ver Trailer <i class="fa-solid fa-play"></i></a>
+    </div>
+
+    <!-- Estadísticas rápidas -->
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-number">+500</span>
+        <span class="stat-label">Juegos</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">24/7</span>
+        <span class="stat-label">Soporte</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">100k</span>
+        <span class="stat-label">Jugadores</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ELEMENTO VISUAL / BANNER HERO (DERECHA) -->
+  <div class="hero-visual">
+    <div class="hero-card-glow"></div>
+    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1000&auto=format&fit=crop" 
+     alt="PixelVault Hero Graphic" 
+     class="hero-image">
+    
+    <!-- Tarjeta flotante interactiva -->
+    <div class="floating-badge">
+      <i class="fa-solid fa-shield-halved"></i>
+      <div>
+        <strong>¡NUEVOS DESCUENTOS!</strong>
+        <p>Desde 35% de descuento</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="descuentos" class="descuentos-seccion">
+  <h2 class="descuentos-titulo">DESCUENTOS</h2>
+
+  <div class="carousel-wrapper">
+    <!-- Radio Buttons Ocultos para controlar la tarjeta activa -->
+    <input type="radio" name="slider" id="slide1" checked>
+    <input type="radio" name="slider" id="slide2">
+    <input type="radio" name="slider" id="slide3">
+
+    <!-- Flechas para la Tarjeta 1 -->
+    <div class="controls control-1">
+      <label for="slide3" class="carousel-btn">&lt;</label>
+      <label for="slide2" class="carousel-btn">&gt;</label>
+    </div>
+
+    <!-- Flechas para la Tarjeta 2 -->
+    <div class="controls control-2">
+      <label for="slide1" class="carousel-btn">&lt;</label>
+      <label for="slide3" class="carousel-btn">&gt;</label>
+    </div>
+
+    <!-- Flechas para la Tarjeta 3 -->
+    <div class="controls control-3">
+      <label for="slide2" class="carousel-btn">&lt;</label>
+      <label for="slide1" class="carousel-btn">&gt;</label>
+    </div>
+
+    <!-- Visor del Carrusel -->
+    <div class="carousel-track-container">
+      <div class="carousel-track">
+        
+        <!-- Tarjeta 1 -->
+        <div class="carousel-card">
+          <span class="badge-descuento">-50%</span>
+          <img src="img/bxSj4jO0KBqUgAbH3zuNjC.jpeg" alt="Cyberpunk 2077">
+          <div class="card-details">
+            <h4>Cyberpunk 2077</h4>
+            <p><span class="p-old">$59.99</span> <span class="p-new">$29.99 USD</span></p>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="carousel-card">
+          <span class="badge-descuento">-35%</span>
+          <img src="img/Wukong.jpeg" alt="Black Myth Wukong">
+          <div class="card-details">
+            <h4>Black Myth Wukong</h4>
+            <p><span class="p-old">$19.99</span> <span class="p-new">$12.99 USD</span></p>
+          </div>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="carousel-card">
+          <span class="badge-descuento">-40%</span>
+          <img src="img/82dc03395aaad04fe6112d41a1a716b8398852687ff919dd2fa36f81d75ac0b2.jpeg" alt="Mortal Kombat 1">
+          <div class="card-details">
+            <h4>Mortal Kombat 1</h4>
+            <p><span class="p-old">$49.99</span> <span class="p-new">$29.99 USD</span></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<br>
+
+<div id="nuevo" class="container">
+    <div class="row1">
+        <h2>¡Explora nuestros nuevos juegos a la venta ya!</h2>
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, eveniet aliquid illo minus dolorem odit sapiente qui maiores quod, perspiciatis doloribus quo architecto at rerum! Quidem obcaecati porro mollitia quod?</h3>
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, eveniet aliquid</h3>
+    </div>
+    <div class="row2">
+        <img src="img/Gemini_Generated_Image_w9lzwcw9lzwcw9lz.jpeg" alt="">
+    </div>
+</div>
+<div class="contenedor-ver-mas">
+  <button class="btn-ver-mas">Ver lo nuevo</button>
+</div>
+<br>
+<section id="catalogo" class="catalogo-seccion">
+  <h2 class="titulo-catalogo">Catálogo de Juegos</h2>
+
+  <!-- Contenedor principal del catálogo -->
+  <div class="catalogo-container">
+    
+    <!-- Tarjeta 1 -->
+    <div class="card">
+      <div class="card-img">
+        <img src="img/3ddebb24ec107f068ca43bb552e68538203e05e4.jpeg" alt="Juego 1">
+      </div>
+      <div class="card-info">
+        <h3>Gta VI</h3>
+        <p class="categoria">Acción / RPG</p>
+        <div class="card-footer">
+          <span class="precio">$99.99</span>
+          <button class="btn-comprar">Comprar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta 2 -->
+    <div class="card">
+      <div class="card-img">
+        <img src="img/IMG_3057-1200x1200.jpeg" alt="Juego 2">
+      </div>
+      <div class="card-info">
+        <h3>Cuphead</h3>
+        <p class="categoria">Aventura / Shooter</p>
+        <div class="card-footer">
+          <span class="precio">$19.99</span>
+          <button class="btn-comprar">Comprar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta 3 -->
+    <div class="card">
+      <div class="card-img">
+        <img src="img/BO-CONFIRMATION-TOUT.jpg" alt="Juego 3">
+      </div>
+      <div class="card-info">
+        <h3>Call Of Duty: Black Ops 7</h3>
+        <p class="categoria">Shooter</p>
+        <div class="card-footer">
+          <span class="precio">$59.99</span>
+          <button class="btn-comprar">Comprar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img">
+        <img src="img/icon.jpeg" alt="Juego 3">
+      </div>
+      <div class="card-info">
+        <h3>Red Dead Redemption II</h3>
+        <p class="categoria">RPG / Accion</p>
+        <div class="card-footer">
+          <span class="precio">$29.99</span>
+          <button class="btn-comprar">Comprar</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">
+        <img src="img/apps.22454.14069096992387554.077406c6-5eaa-418e-9391-587c0870beb5.jpeg" alt="Juego 3">
+      </div>
+      <div class="card-info">
+        <h3>Need For Speed: Most wanted (2012)</h3>
+        <p class="categoria">Carreras / Accion</p>
+        <div class="card-footer">
+          <span class="precio">$19.99</span>
+          <button class="btn-comprar">Comprar</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">
+        <img src="img/1200_630.jpeg" alt="Juego 3">
+      </div>
+      <div class="card-info">
+        <h3>God of War: Ragnarok</h3>
+        <p class="categoria">Aventura / Accion</p>
+        <div class="card-footer">
+          <span class="precio">$39.99</span>
+          <button class="btn-comprar">Comprar</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">
+        <img src="img/images (1).jpeg" alt="Juego 3">
+      </div>
+      <div class="card-info">
+        <h3>The Last of Us: Part II Remastered</h3>
+        <p class="categoria">Aventura / Accion</p>
+        <div class="card-footer">
+          <span class="precio">$59.99</span>
+          <button class="btn-comprar">Comprar</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">
+        <img src="img/apps.25611.13618679251812087.f1d2dec5-00f3-41fb-9f2b-37e86fac8773.jpeg" alt="Juego 3">
+      </div>
+      <div class="card-info">
+        <h3>FC 27</h3>
+        <p class="categoria">Deportes</p>
+        <div class="card-footer">
+          <span class="precio">$49.99</span>
+          <button class="btn-comprar">Comprar</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">
+        <img src="img/054ff23fde43c010f63ed99eb1fca6957c26d2b136a9294d.jpeg" alt="Juego 3">
+      </div>
+      <div class="card-info">
+        <h3>Battlefield 6</h3>
+        <p class="categoria">Shooter / Accion</p>
+        <div class="card-footer">
+          <span class="precio">$29.99</span>
+          <button class="btn-comprar">Comprar</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">
+        <img src="img/1c7b75d8ed9271516546560d219ad0b22ee0a263b4537bd8.jpeg" alt="Juego 3">
+      </div>
+      <div class="card-info">
+        <h3>Spiderman 2</h3>
+        <p class="categoria">Aventura / Accion</p>
+        <div class="card-footer">
+          <span class="precio">$19.99</span>
+          <button class="btn-comprar">Comprar</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">
+        <img src="img/670c294ded3baf4fa11068db2ec6758c63f7daeb266a35a1.jpeg" alt="Juego 3">
+      </div>
+      <div class="card-info">
+        <h3>Minecraft</h3>
+        <p class="categoria">Aventura / RPG</p>
+        <div class="card-footer">
+          <span class="precio">$19.99</span>
+          <button class="btn-comprar">Comprar</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">
+        <img src="img/MV5BNGY2NjUzOTItMjkzNS00NzNiLWIwY2MtMzQ3MDIwY2RlNjdjXkEyXkFqcGc@._V1_.jpeg" alt="Juego 3">
+      </div>
+      <div class="card-info">
+        <h3>Horizon: Zero Dawn</h3>
+        <p class="categoria">Aventura / RPG</p>
+        <div class="card-footer">
+          <span class="precio">$59.99</span>
+          <button class="btn-comprar">Comprar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="contenedor-ver-mas">
+  <button class="btn-ver-mas">Ver más...</button>
+</div>
+</section>
+<br>
+</div>
+<footer id="nosotros"class="footer">
+  <div class="footer-container">
+    
+    <!-- COLUMNA 1: Sobre la marca / Información -->
+    <div class="footer-columna">
+      <h3 class="footer-logo">Pixel<span>Vault</span></h3>
+      <p class="footer-descripcion">
+        Tu plataforma definitiva para descubrir los mejores videojuegos, novedades y ofertas exclusivas.
+      </p>
+    </div>
+
+    <!-- COLUMNA 2: Enlaces de navegación -->
+    <div class="footer-columna">
+      <h4>Navegación</h4>
+      <ul class="footer-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#nuevo">Nuevo</a></li>
+        <li><a href="#descuentos">Descuentos</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+      </ul>
+    </div>
+
+    <!-- COLUMNA 3: Información de contacto -->
+    <div class="footer-columna">
+      <h4>Contacto</h4>
+      <ul class="footer-contacto">
+        <li><i class="fa-solid fa-envelope"></i> soporte@PixelVault.com</li>
+        <li><i class="fa-solid fa-phone"></i> +57 322 687 80 17</li>
+        <li><i class="fa-solid fa-location-dot"></i> Medellín, Colombia</li>
+      </ul>
+    </div>
+
+    <!-- COLUMNA 4: Redes sociales -->
+    <div class="footer-columna">
+      <h4>Síguenos</h4>
+      <div class="footer-sociales">
+        <a href="#" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+        <a href="#" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-columna footer-columna-contacto">
+  <h4>¡Contactanos!</h4>
+  
+  <ul class="footer-contacto">
+    <li><i class="fa-solid fa-envelope"></i> soporte@PixelVault.com</li>
+    <li><i class="fa-solid fa-phone"></i> +57 322 687 80 17</li>
+  </ul>
+
+  <!-- Formulario de contacto -->
+  <form class="footer-form" novalidate>
+    <div class="form-group">
+      <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+      <span class="error-msg">Por favor ingresa tu nombre</span>
+    </div>
+
+    <div class="form-group">
+      <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+      <span class="error-msg">Ingresa un correo electrónico válido</span>
+    </div>
+
+    <div class="form-group">
+      <textarea id="mensaje" name="mensaje" rows="3" placeholder="Escribe tu mensaje..." required></textarea>
+      <span class="error-msg">El mensaje no puede estar vacío</span>
+    </div>
+
+    <button type="submit" class="btn-enviar">Enviar mensaje</button>
+  </form>
+</div>
+
+  <!-- SECCIÓN DE COPYRIGHT -->
+  <div class="footer-copyright">
+    <p>&copy; 2026 PixelVault Todos los derechos reservados.</p>
+  </div>
+</footer>
+</body>
+</html>
